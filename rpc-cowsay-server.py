@@ -24,7 +24,7 @@ def application(request):
 
 
 def main():
-    run_simple("localhost", 8080, application)
+    run_simple("127.0.0.1", 8080, application)
 
 
 if __name__ == "__main__":
