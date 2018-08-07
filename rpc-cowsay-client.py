@@ -7,7 +7,7 @@ def main():
     url = "http://localhost:8080/jsonrpc"
     headers = {'content-type': 'application/json'}
 
-    q = subprocess.run(["fortune", "futurama"], stdout=subprocess.PIPE)
+    q = subprocess.run(["fortune"], stdout=subprocess.PIPE)
     d = q.stdout.decode("utf-8")
     # Example echo method
     payload = {
