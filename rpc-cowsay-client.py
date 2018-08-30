@@ -4,7 +4,7 @@ import subprocess
 
 
 def main():
-    url = "http://0.0.0.0:3031/api/cowsay"
+    url = "http://0.0.0.0:443/api/cowsay"
     headers = {'content-type': 'application/json'}
 
     q = subprocess.run(["fortune"], stdout=subprocess.PIPE)
