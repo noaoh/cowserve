@@ -1,7 +1,8 @@
 #!/usr/bin/env python
-from flask import Flask
+from flask import Flask, send_file
 from flask_restful import Api, reqparse, Resource
 from pysay.scripts.pysay import cowsay as _cowsay, Appearance
+import os
 
 app = Flask(__name__)
 api = Api(app)
@@ -41,6 +42,11 @@ class Cowthink(Resource):
         cow = args.pop("f")
         return {"message": _cowsay(cow=cow, message=message, a=Appearance(**args, thinking=True))}
 
+
+@app.route("/")
+def index():
+    index_path = os.path.join(app.static_folder, 'index.html')
+    return send_file(index_path)
 
 api.add_resource(Cowsay, "/api/cowsay")
 api.add_resource(Cowthink, "/api/cowthink")
