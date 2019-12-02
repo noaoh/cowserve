@@ -5,7 +5,7 @@ greenlet==0.4.14
 idna==2.7
 json-rpc==1.11.0
 pip-autoremove==0.9.1
-requests==2.19.1
+requests==2.20.0
 urllib3==1.23
 Werkzeug==0.14.1
 ws4py==0.5.1
